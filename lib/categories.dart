@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/data/dammy_data.dart';
+import 'package:meals_app/widgets/category_grid_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
@@ -17,13 +19,8 @@ class CategoriesScreen extends StatelessWidget {
               mainAxisSpacing: 20
           ),
       children: [
-        Image.network('https://unsplash.com/photos/young-asian-travel-woman-is-enjoying-with-beautiful-place-in-bangkok-thailand-_Fqoswmdmoo'),
-        Image.network('https://unsplash.com/photos/young-asian-travel-woman-is-enjoying-with-beautiful-place-in-bangkok-thailand-_Fqoswmdmoo'),
-        Image.network('https://unsplash.com/photos/young-asian-travel-woman-is-enjoying-with-beautiful-place-in-bangkok-thailand-_Fqoswmdmoo'),
-        Image.network('https://unsplash.com/photos/young-asian-travel-woman-is-enjoying-with-beautiful-place-in-bangkok-thailand-_Fqoswmdmoo'),
-        Image.network('https://unsplash.com/photos/young-asian-travel-woman-is-enjoying-with-beautiful-place-in-bangkok-thailand-_Fqoswmdmoo'),
-        Image.network('https://unsplash.com/photos/young-asian-travel-woman-is-enjoying-with-beautiful-place-in-bangkok-thailand-_Fqoswmdmoo'),
-
+        for (final category in availableCategories)
+          CategoryGridItem(category: category)
       ],
       ),
     );
